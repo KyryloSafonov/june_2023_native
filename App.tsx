@@ -12,6 +12,7 @@ import Home from './screens/Home.tsx';
 import Users from './screens/Users.tsx';
 import UserPosts from './screens/UserPosts.tsx';
 import {Routes} from './routes';
+import Tabs from './screens/tabs/Tabs.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,7 @@ const App = (): React.JSX.Element => {
         <Stack.Screen name={Routes.HOME} component={Home} />
         <Stack.Screen name={Routes.USERS} component={Users} />
         <Stack.Screen name={Routes.USER_POSTS} component={UserPosts} />
+        <Stack.Screen name={Routes.TABS} component={Tabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );

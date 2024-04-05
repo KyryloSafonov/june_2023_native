@@ -2,11 +2,12 @@ import React, {FC, useEffect, useState} from 'react';
 import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Routes} from '../routes';
+import {UserNavigationProps} from '../routes/types.ts';
 
 const Users: FC = () => {
   const [users, setUsers] = useState<any[]>();
 
-  const {navigate} = useNavigation<any>();
+  const {navigate} = useNavigation<UserNavigationProps>();
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')

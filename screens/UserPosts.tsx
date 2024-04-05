@@ -1,11 +1,14 @@
 import React, {FC, useEffect, useState} from 'react';
 import {FlatList, Text, View} from 'react-native';
 import {useRoute} from '@react-navigation/native';
+import {RouteParams, UserPostsScreenParams} from '../routes/types.ts';
+import {Routes} from '../routes';
 
 const UserPosts: FC = () => {
   const [posts, setPosts] = useState<any[]>();
 
-  const {params} = useRoute<any>();
+  const {params} =
+    useRoute<RouteParams<Routes.USER_POSTS, UserPostsScreenParams>>();
 
   const {userId, userName} = params;
 

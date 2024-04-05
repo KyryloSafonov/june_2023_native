@@ -16,6 +16,7 @@ const Home: FC = () => {
       }}>
       <Text>Home</Text>
       <Button title={'Go to Users'} onPress={() => navigate(Routes.USERS)} />
+      <Button title={'Go to Tabs'} onPress={() => navigate(Routes.TABS)} />
     </View>
   );
 };
